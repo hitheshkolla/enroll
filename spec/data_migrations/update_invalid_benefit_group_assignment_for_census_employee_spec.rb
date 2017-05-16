@@ -30,7 +30,7 @@ describe UpdateInvalidBenefitGroupAssignmentForCensusEmployee do
       allow(ENV).to receive(:[]).with("employee_role_id").and_return(employee_role.id.to_s)
       allow(employee_role).to receive(:census_employee).and_return(census_employee)
       benefit_group_assignment1.hbx_enrollment_id = hbx_enrollment1.id
-      benefit_group_assignment1.save(validate: false)
+      benefit_group_assignment1.save
     end
 
    
